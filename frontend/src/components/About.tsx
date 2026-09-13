@@ -26,7 +26,7 @@ const textVariants: Variants = {
 
 export default function About() {
   return (
-    <section id="about" className="relative z-10 flex min-h-screen items-center justify-center py-24 px-6 md:px-12 pointer-events-auto">
+    <section id="about" className="relative z-10 flex min-h-screen items-center justify-center py-24 px-4 md:px-12 pointer-events-auto">
       <div className="w-full max-w-4xl mx-auto relative">
         <motion.div
           variants={containerVariants}
@@ -34,10 +34,10 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <GlassCard className="flex flex-col p-10 md:p-16">
+          <GlassCard className="flex flex-col p-6 md:p-16 mx-0 md:mx-auto will-change-transform">
             <motion.h2
               variants={textVariants}
-              className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mb-8 tracking-tight drop-shadow-[0_0_15px_rgba(52,211,153,0.2)]"
+              className="text-3xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mb-6 md:mb-8 tracking-tight drop-shadow-[0_0_15px_rgba(52,211,153,0.2)]"
             >
               Welcome to Arachno World
             </motion.h2>

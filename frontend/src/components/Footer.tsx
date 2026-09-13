@@ -5,14 +5,14 @@ import GlassCard from "./GlassCard";
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 w-full max-w-[1400px] mx-auto px-8 pb-12 pointer-events-auto">
+    <footer className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 pb-12 pointer-events-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
       >
-        <GlassCard className="p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <GlassCard className="p-6 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 will-change-transform">
           
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 max-w-md">
             <h2 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.2)]">
