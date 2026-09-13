@@ -20,8 +20,7 @@ export default function DonationWidget() {
     // Determine backend URL
     const fetchConfig = async () => {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-        const response = await fetch(`${apiUrl}/api/donation`);
+        const response = await fetch('/api/donation');
         if (response.ok) {
           const data = await response.json();
           setConfig(data);
