@@ -123,12 +123,7 @@ function DustParticles() {
 export default function BackgroundScene() {
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
-      <Canvas 
-        camera={{ position: [0, 0, 10], fov: 75 }} 
-        gl={{ preserveDrawingBuffer: true, alpha: true }}
-        style={{ objectFit: 'cover', objectPosition: '50% 20%' }}
-        className="object-cover object-[50%_20%]"
-      >
+      <Canvas camera={{ position: [0, 0, 10], fov: 75 }} gl={{ preserveDrawingBuffer: true, alpha: true }}>
         <ambientLight intensity={0.5} />
         <ShaderPlane />
         <DustParticles />

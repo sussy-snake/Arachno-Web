@@ -32,11 +32,11 @@ export default function ChacoGoldenKneeSpotlight() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-8 w-full max-w-full mx-4 md:mx-auto will-change-transform"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 w-full"
       >
         {/* Data Card - Spans 2 rows on large screens */}
         <motion.div variants={itemVariants} className="lg:col-span-1 lg:row-span-2 h-full">
-          <GlassCard className="h-full p-6 md:p-8 flex flex-col justify-start">
+          <GlassCard className="h-full p-8 flex flex-col justify-start">
             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-amber-200 to-white mb-2 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)] tracking-tight">
               Chaco Golden Knee
             </h3>
@@ -115,7 +115,7 @@ export default function ChacoGoldenKneeSpotlight() {
 
         {/* Deep Dive Details Card - Fills bottom space under images */}
         <motion.div variants={itemVariants} className="lg:col-span-3 h-full">
-          <GlassCard className="h-full p-6 md:p-8 flex flex-col justify-center">
+          <GlassCard className="h-full p-8 flex flex-col justify-center">
             <h4 className="text-xl font-bold text-white mb-4 tracking-wider">Husbandry Requirements</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-white/80 leading-relaxed">
               <div>
