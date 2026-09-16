@@ -11,6 +11,7 @@ import CobaltBlueSpotlight from "@/components/CobaltBlueSpotlight";
 import ChacoGoldenKneeSpotlight from "@/components/ChacoGoldenKneeSpotlight";
 import Footer from "@/components/Footer";
 import DonationWidget from "@/components/DonationWidget";
+import GlassCard from "@/components/GlassCard";
 
 type ViewState = 'landing' | 'hub' | 'araneae';
 
@@ -58,19 +59,34 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col w-full pt-24"
+              className="flex flex-col w-full relative"
             >
-              <div className="w-full max-w-7xl mx-auto px-4 flex justify-start mb-8">
-                <button
+              {/* Sticky Liquid Glass Back Button */}
+              <div className="sticky top-6 z-50 w-full max-w-[1400px] mx-auto px-4 md:px-8 flex justify-start pointer-events-none mb-12">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setCurrentView('hub')}
-                  className="px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all backdrop-blur-md"
+                  className="pointer-events-auto will-change-transform"
                 >
-                  &larr; Back to Hub
-                </button>
+                  <GlassCard className="px-6 py-3 flex items-center gap-3 !rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 group">
+                    <svg 
+                      width="18" height="18" viewBox="0 0 24 24" fill="none" 
+                      stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                      className="group-hover:-translate-x-1 transition-transform duration-300"
+                    >
+                      <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                    <span className="font-bold tracking-widest text-sm uppercase text-white/90">Back to Hub</span>
+                  </GlassCard>
+                </motion.button>
               </div>
-              <SpeciesSpotlight />
-              <CobaltBlueSpotlight />
-              <ChacoGoldenKneeSpotlight />
+
+              <div className="pt-8">
+                <SpeciesSpotlight />
+                <CobaltBlueSpotlight />
+                <ChacoGoldenKneeSpotlight />
+              </div>
               <div className="h-16" />
               <DonationWidget />
               <div className="h-16" />
